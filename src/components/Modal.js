@@ -1,28 +1,22 @@
-import React, { useRef } from 'react';
+import React,{useState} from "react";
 
-const Modal = ({ show, onClose, children }) => {
-  const modalRef = useRef(null);
 
-  const handleCloseModal = (event) => {
-    if (event.target === modalRef.current) {
-      onClose();
-    }
-  };
 
-  if (!show) {
-    return null;
-  }
+const Modal=({onClose,show})=>{
 
-  return (
-    <div className="modal-overlay" onClick={handleCloseModal} ref={modalRef}>
-      <div className="modal-dialog" onClick={onClose}>
-        <button className="modal-close" onClick={onClose}>
-          Close
-        </button>
-        <div className="modal-content">{children}</div>
-      </div>
-    </div>
-  );
-};
 
+
+    return(
+    <div onClick={onClose} className="full">        
+    { show== true ? 
+            <div className="model-overlay">
+                 <button className="model-close" onClick={onClose}>Close</button>
+                 <div className="model">
+                 <p className="model-p">This is the content of the modal.</p>
+                 </div>
+                
+        </div> : "" }
+        </div>
+    )
+}
 export default Modal;
