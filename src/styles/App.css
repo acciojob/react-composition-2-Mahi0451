@@ -1,1 +1,20 @@
 
+button{
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+.model-overlay{
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    margin: 6px 0px;
+    border-radius: 4px;
+}
+.model-close{
+    margin: 8px 18px;
+}
+.model-p{
+    margin: 0px 4px;
+}
